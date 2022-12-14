@@ -4,7 +4,7 @@ After=network-online.target
 
 [Mount]
 Type=9p
-What=share
+What=fs0
 Where=/proj
 Options=ro
 

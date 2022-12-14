@@ -1,0 +1,9 @@
+[Unit]
+Description=Redis data structure server
+Documentation=https://redis.io/documentation
+Wants=network-online.target
+After=network-online.target
+After=proj.mount
+
+[Service]
+ExecStart=/proj/bin/redis-noinstr/redis-server --protected-mode no --save "" --appendonly no --io-threads 1 --kerncall yes
