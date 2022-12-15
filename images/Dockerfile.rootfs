@@ -25,7 +25,7 @@ RUN systemctl disable NetworkManager-wait-online.service NetworkManager.service 
     systemctl enable systemd-networkd.service && \
     usermod --password $(openssl passwd -1 "123") root && \
     echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && \
-    echo "MaxAuthTries 10" >> /etc/ssh/sshd_config && \
+    echo "MaxAuthTries 10" >> /etc/ssh/sshd_config
 ARG FILES
 ADD ${FILES}/autologin.conf /etc/systemd/system/serial-getty@ttyS1.service.d/
 ADD ${FILES}/autologin.conf /etc/systemd/system/serial-getty@ttyS0.service.d/
