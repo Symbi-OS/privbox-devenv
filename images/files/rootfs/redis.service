@@ -7,3 +7,6 @@ After=proj.mount
 
 [Service]
 ExecStart=/proj/bin/redis-noinstr/redis-server --protected-mode no --save "" --appendonly no --io-threads 1 --kerncall yes
+
+[Install]
+WantedBy=network-online.target
